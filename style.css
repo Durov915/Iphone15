@@ -1,0 +1,362 @@
+body {
+    margin: 0;
+    background: #000;
+    background-size: cover;
+    background-position: center;
+}
+
+.phone {
+    display: block;
+    width: 319.6px;
+    height: 664.4px;
+    background: white;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 48.6px;
+    box-shadow: inset 2px 0 12px #494949;
+}
+
+.notch {
+    width: 306.6px;
+    height: 651.4px;
+    background: rgb(0, 0, 0);
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%, 6.5px);
+    border-radius: 44.6px;
+    box-shadow: -2px 0px 15px 1.5px #494949;
+    border: 1px 2px solid black;
+}
+
+.stripe {
+    position: absolute;
+    background: rgb(83, 78, 78);
+    width: 100%;
+    height: 4px;
+}
+
+.top {
+    top: 10%;
+}
+
+.bottom {
+    bottom: 10%;
+}
+
+.button {
+    position: absolute;
+    background: #000000;
+    background: linear-gradient(to bottom, #494949 0%, #aaaaaa 12%, #dddddd 50%, #aaaaaa 88%, #494949 100%);
+    width: 3px;
+}
+
+.mute {
+    height: 25px;
+    top: 75px;
+    left: -1px;
+    border-radius: 1.5px 0 0 1.5px;
+}
+
+.volume-up {
+    height: 50px;
+    top: 125px;
+    left: -1px;
+    border-radius: 1.5px 0 0 1.5px;
+}
+
+.volume-down {
+    height: 50px;
+    top: 190px;
+    left: -1px;
+    border-radius: 1.5px 0 0 1.5px;
+}
+
+.hold {
+    height: 75px;
+    top: 145px;
+    left: 99.5%;
+    border-radius: 0px 1.5px 1.5px 0px;
+}
+
+.charging-port {
+    position: absolute;
+    background: rgb(0, 0, 0);
+    width: 30px;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 60% 60% 0 0;
+}
+
+.screen {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 293px;
+    height: 637px;
+    transform: translate(2.2%, 7px);
+    border-radius: 38.6px;
+    z-index: 1;
+    opacity: 0;
+
+
+}
+
+.screen:hover {
+    transition: 1s;
+    opacity: 1;
+    
+    background-image: url(assets/iPhone-15-Pro-Natural-Wallpaper-5.webp);
+}
+
+#background {
+    border-radius: 38.6px;
+    position: absolute;
+    object-fit: cover;
+    top: -1px;
+    width: 100%;
+    height: 100.5%;
+    filter: brightness(80%);
+}
+
+#logo {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-top: 100%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.island {
+    background: black;
+    width: 83px;
+    height: 23px;
+    /* transform: translate(118%, -3px); */
+    border-radius: 20px;
+    position: absolute;
+    left: 108px;
+    top: 8px;
+}
+
+
+.island:hover .camera {
+
+
+    transform: scale(0);
+    transition:  0s;
+
+
+}
+
+.island:hover .speaker {
+    transform: scale(0);
+    transition: 0s;
+}
+
+.island:hover {
+    width: 261px;
+    height: 50px;
+    transition: 0.5s ease;
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    background-color: black;
+}
+
+.left-pie {
+    position: absolute;
+    overflow: hidden;
+    height: 8px;
+    width: 8px;
+    left: -8px;
+    transform: rotate(90deg);
+}
+
+
+
+
+
+
+.speaker {
+    position: absolute;
+    height: 6px;
+    width: 33px;
+    background: #1e1d1d;
+    top: 7.5px;
+    left: 20px;
+    border-radius: 40px;
+}
+
+.camera {
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    background: #222222;
+    transform: translateX(-95%);
+    border-radius: 10px;
+    left: 76px;
+    top: 6px;
+}
+
+.lens {
+    position: absolute;
+    background: blue;
+    border-radius: 8px;
+}
+
+.left {
+    filter: brightness(70%);
+    width: 4px;
+    height: 4px;
+    margin: 1px 2px 0 0;
+}
+
+.right {
+    filter: brightness(50%);
+    width: 5px;
+    height: 5px;
+    left: 2px;
+    top: 1px
+}
+
+.phone-border {
+    position: absolute;
+    width: 0px;
+    height: 75.5%;
+    border-radius: 48.6px;
+    border: 157.4px solid rgb(255, 255, 255);
+    border-top: 0px;
+    top: 2px;
+    margin-left: 2px;
+}
+
+.frame-base-light::after {
+    position: absolute;
+    content: ' ';
+    opacity: .5;
+    width: 0px;
+    height: 97.2px;
+    border-radius: 50px;
+    filter: blur(1px);
+    border: 155.4px solid black;
+    border-top: 0px;
+    top: 2px;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.notch-light {
+    position: absolute;
+    width: 0px;
+    height: 601.4px;
+    border-radius: 50px;
+    opacity: .5;
+    filter: blur(3px);
+    border: 44.6px solid white;
+    border-top: 0px;
+    top: 2px;
+    margin-left: 4px;
+}
+
+.notch-light::after {
+    position: absolute;
+    content: ' ';
+    width: 0px;
+    height: 601.4px;
+    border-radius: 50px;
+    border: 44.6px solid rgb(15, 15, 15);
+    border-top: 0px;
+    top: 2px;
+    left: -40px;
+}
+
+.light-right {
+    left: 100%;
+    transform: rotate(180deg) translateX(96.2px);
+}
+
+.white-line {
+    height: 3.1px;
+    width: 105px;
+    position: absolute;
+    left: 91px;
+    background-color: white;
+    bottom: 5.3px;
+    border-radius: 80px;
+    z-index: 4;
+}
+.time{
+    height: 75px;
+    width: 200px;
+    font-size: 65px;
+    position: absolute;
+    left: 51px;
+    top: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    color: #b8b4b4;
+    opacity: 0.9;
+    font-weight: 600
+}
+.date{
+    height: 40px;
+    width: 215px;
+    font-size: 17px;
+    position: absolute;
+    left: 41px;
+    top: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    color: #ded9d9;
+    opacity: 0.9;
+    font-weight: 500;
+}
+.menu{
+    font-size: 20px;
+    color: #d7d5d5;
+    position: absolute;
+    top: 9px;
+    right: 24px;
+    display: flex;
+    gap: 1px
+}
+.tourch{
+    font-size: 25px;
+    color: #d1cbcb;
+    border: 2px solid grey;
+    border-radius: 50px;
+    width: 28px;
+    background-color: #575757;
+    padding: 3.5px;
+    position: absolute;
+    bottom: 35px;
+    left: 25px
+}
+.tourch:hover{
+      color: black;
+      background-color: white;
+      border-color: black;
+}
+.cam-icon:hover{
+    color: black;
+    background-color: white;
+    border-color: #000;
+}
+.cam-icon{
+    font-size: 25px;
+    color: #d1cbcb;
+    border: 2px solid grey;
+    border-radius: 50px;
+    width: 28px;
+    background-color: #575757;
+    padding: 3.5px;
+    position: absolute;
+    bottom: 35px;
+    right: 25px
+}

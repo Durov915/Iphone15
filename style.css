@@ -6,8 +6,8 @@ body {
 }
 .power-instruction {
     position: absolute;
-    bottom: 100vh;
-    left: 50%;
+    bottom: 90vh;
+    left: 80%;
     transform: translateX(-50%);
     font-size: 19px;
     color: #fff;

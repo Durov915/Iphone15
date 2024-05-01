@@ -12,19 +12,24 @@
 </head>
 
 <body>
-    <div class="phone">
+    <div class="power-instruction">
+        Tap the power button to turn on
+    </div>
+
+    <div class="phone" id="phone">
         <div class="phone-border"></div>
         <div class="button mute"></div>
         <div class="button volume-up"></div>
         <div class="button volume-down"></div>
-        <div class="button hold"></div>
+        <div class="button hold" onclick="lockScreen()"></div>
         <div class="stripe top"></div>
         <div class="stripe bottom"></div>
         <div class="charging-port"></div>
         <div class="notch">
             <div class="notch-light"></div>
             <div class="notch-light light-right"></div>
-            <div class="screen">
+
+            <div class="screen" id="screen">
                 <div class="island">
                     <div class="left-pie"></div>
                     <div class="right-pie"></div>
@@ -34,17 +39,63 @@
                         <div class="lens right"></div>
                     </div>
                 </div>
-                <div class="menu"> <i class='bx bx-signal-4' ></i> <i class='bx bx-wifi'></i>
-                      <i class='bx bxs-battery-charging' ></i>
+                <div class="menu">
+                    <i class='bx bx-signal-4'></i>
+                    <i class='bx bx-wifi'></i>
+                    <i class='bx bxs-battery-charging'></i>
                 </div>
-                <div class="date"> Tuesday, september 12 </div>
-                <div class="time"> 9:41  </div>
-                <div class="tourch"><i class='bx bxs-torch' ></i></div>
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+                <div class="tourch"><i class='bx bxs-torch'></i></div>
                 <div class="white-line"></div>
-                <div class="cam-icon"><i class='bx bxs-camera' ></i></div>
+                <div class="cam-icon"><i class='bx bxs-camera'></i></div>
             </div>
         </div>
     </div>
+
+    <script>
+
+        function lockScreen() {
+            var screen = document.getElementById('screen');
+            if (screen.style.opacity == "1") {
+                screen.style.opacity = "0";
+                screen.style.transition = "0.5s";
+            } else {
+                screen.style.opacity = "1";
+                screen.style.transition = "1s";
+
+            }
+        }
+
+
+
+        function updateTime() {
+    const now = new Date();
+    //date
+    const dateOptions = { weekday: 'long', month: 'long', day: 'numeric', locale: 'gu-IN' };
+    const formattedDate = now.toLocaleDateString('gu-IN', dateOptions);
+
+    document.getElementById('currentDate').textContent = formattedDate;
+
+    
+    //time
+    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true, locale: 'gu-IN' };
+    const formattedTime = now.toLocaleTimeString('gu-IN', timeOptions);
+
+    
+    document.getElementById('currentTime').textContent = formattedTime;
+
+    requestAnimationFrame(updateTime);
+}
+
+updateTime();
+
+
+
+
+
+
+    </script>
 </body>
 
 </html>

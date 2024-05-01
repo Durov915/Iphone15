@@ -290,19 +290,19 @@ body {
   color: #ded9d9;
   position: absolute;
   top: 55px;
-  left: 41px;
+  left: 103px;
   font-family: sans-serif;
   font-weight: 500;
 }
 
 .time {
-  font-size: 35px;
-  color: #b8b4b4;
-  position: absolute;
-  top: 85px;
-  left: 51px;
-  font-family: sans-serif;
-  font-weight: 600;
+    font-size: 35px;
+    color: #b8b4b4;
+    position: absolute;
+    top: 95px;
+    left: 44px;
+    font-family: sans-serif;
+    font-weight: 600;
 }
 .menu {
   font-size: 20px;

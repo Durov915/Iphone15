@@ -6,7 +6,7 @@ body {
 }
 .power-instruction {
     position: absolute;
-    bottom: 94vh;
+    bottom: 100vh;
     left: 50%;
     transform: translateX(-50%);
     font-size: 19px;
